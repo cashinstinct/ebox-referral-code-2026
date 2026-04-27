@@ -4,6 +4,11 @@
 
 Looking for a valid EBOX referral code for 2026? Use the verified client code **ge911** to instantly unlock a $25 credit on your new EBOX internet subscription. This offer is available for new customers in both Quebec and Ontario.
 
+### 👕 Support the project
+Need stickers for your laptop ? Use my link to get $12.50 CAD credit on your first order.
+Get **$12.50 off** your first order at the **Cashinstinct** Stickermule store!
+[![Shop Cashinstinct](https://img.shields.io/badge/Get_Credit-Click_Here-brightgreen?style=flat-square&logo=stickermule)](https://www.stickermule.com/u/cashinstinct)
+
 ## 💡 How to claim your $25 EBOX bonus:
 Using an EBOX referral code during your initial sign-up is the **only** way to get this bonus. **Important:** EBOX does not allow you to add a referral code retroactively once your order is processed.
 
@@ -19,15 +24,16 @@ Using an EBOX referral code during your initial sign-up is the **only** way to g
 * **Free Wi-Fi 6 Router:** A high-end Nokia Beacon router is included for free with most fiber plans.
 * **No Price Hikes:** Say goodbye to the "promo expired, pay double" trap typical of major telecoms.
 
-### 👕 Support the project
-Get **$12.50 off** your first order at the **Cashinstinct** Stickermule store!
-[![Shop Cashinstinct](https://img.shields.io/badge/Get_Credit-Click_Here-brightgreen?style=flat-square&logo=stickermule)](https://www.stickermule.com/u/cashinstinct)
-
 ---
 
 # 🇨🇦 Code Promo EBOX 2026 : Obtenez 25$ de Rabais (Code : ge911)
 
 Vous cherchez un code de référence EBOX valide en 2026? Utilisez le code client vérifié **ge911** pour débloquer instantanément un crédit de 25$ sur votre nouvel abonnement internet EBOX. Cette offre est valide pour les nouveaux clients résidant au Québec et en Ontario.
+
+### 👕 Support du projet
+Besoin de stickers pour ton laptop ? Utilise mon lien pour obtenir un crédit de 12,50 $.
+Obtiens **12,50$ de rabais** sur ta première commande sur le **Cashinstinct** Stickermule store, 
+[![Shop Cashinstinct](https://img.shields.io/badge/Get_Credit-Click_Here-brightgreen?style=flat-square&logo=stickermule)](https://www.stickermule.com/u/cashinstinct)
 
 ## 💡 Comment réclamer votre prime EBOX de 25$ :
 L'utilisation d'un code de parrainage lors de votre inscription initiale est la **seule** façon d'obtenir ce bonus. **Attention :** EBOX n'autorise pas l'ajout rétroactif d'un code de référence une fois la commande validée!
