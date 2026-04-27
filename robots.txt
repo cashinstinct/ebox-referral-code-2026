@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
 Sitemap: https://cashinstinct.github.io/ebox-referral-code-2026/sitemap.xml
