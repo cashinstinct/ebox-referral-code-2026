@@ -19,6 +19,10 @@ Using an EBOX referral code during your initial sign-up is the **only** way to g
 * **Free Wi-Fi 6 Router:** A high-end Nokia Beacon router is included for free with most fiber plans.
 * **No Price Hikes:** Say goodbye to the "promo expired, pay double" trap typical of major telecoms.
 
+### 👕 Support the project
+Get **$12.50 off** your first order at the **Cashinstinct** Stickermule store!
+[![Shop Cashinstinct](https://img.shields.io/badge/Get_Credit-Click_Here-brightgreen?style=flat-square&logo=stickermule)](https://www.stickermule.com/u/cashinstinct)
+
 ---
 
 # 🇨🇦 Code Promo EBOX 2026 : Obtenez 25$ de Rabais (Code : ge911)
