@@ -53,39 +53,7 @@
               "name": "Quand est appliqué le rabais EBOX de 25$?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Le crédit de 25$ est appliqué automatiquement sur votre deuxième facture mensuelle EBOX, pas la première. Il faut obligatoirement entrer le code GE911 au moment de l'inscription — il n'est pas possible de l'ajouter rétroactivement."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le code parrainage EBOX GE911 est-il valide au Québec et en Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui, le code GE911 est valide pour les nouveaux clients EBOX résidant au Québec et en Ontario. EBOX dessert ces deux provinces avec ses forfaits internet fibre, câble et FTTN."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "EBOX est-il un fournisseur indépendant de Bell?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. EBOX est une filiale de Bell Canada. Vous utilisez le même réseau fibre optique (FTTH) que Bell, mais à des tarifs généralement plus bas et sans contrat à long terme."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the EBOX promo code for 2026?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The active EBOX referral code for 2026 is GE911. It gives you a $25 credit applied to your second monthly invoice. Enter this code when signing up at ebox.ca."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is there an EBOX referral code for Quebec and Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, the referral code GE911 is valid for new EBOX customers in both Quebec and Ontario. Apply it at sign-up on ebox.ca to receive a $25 credit on your second bill."
+                "text": "Le crédit de 25$ est appliqué automatiquement sur votre deuxième facture mensuelle EBOX, pas la première. Il faut obligatoirement entrer le code GE911 au moment de l'inscription."
               }
             }
           ]
@@ -99,6 +67,8 @@
             --blue: #2563eb;
             --blue-light: #eff6ff;
             --red: #dc2626;
+            --orange: #f97316;
+            --orange-light: #fff7ed;
             --dark: #1e293b;
             --mid: #475569;
             --light: #f8fafc;
@@ -122,7 +92,6 @@
             padding: 32px 20px 60px;
         }
 
-        /* APPLE-STYLE LANG TOGGLE */
         .lang-toggle {
             display: flex;
             justify-content: center;
@@ -149,7 +118,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        /* SECTIONS */
         .lang-section { display: none; }
         .lang-section.active { display: block; animation: fadeIn 0.3s ease; }
         
@@ -158,7 +126,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* CARD */
         .card {
             background: white;
             border-radius: 16px;
@@ -185,7 +152,6 @@
 
         p { font-size: 1.05em; color: var(--mid); margin-bottom: 12px; }
 
-        /* CODE BOX */
         .code-box {
             background: var(--blue-light);
             border: 2px dashed var(--blue);
@@ -224,9 +190,31 @@
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
-        .copy-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
 
-        /* BADGE */
+        /* STICKER MULE PROMO SECTION */
+        .sticker-promo {
+            margin-top: 32px;
+            padding: 24px;
+            background: var(--orange-light);
+            border: 1px solid #ffedd5;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .sticker-promo strong { color: #9a3412; display: block; margin-bottom: 6px; font-size: 1.1em; }
+        .sticker-promo p { font-size: 0.95em; color: #c2410c; margin-bottom: 16px; }
+        .sticker-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: var(--orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95em;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .sticker-btn:hover { background: #ea580c; transform: translateY(-1px); }
+
         .badge {
             display: inline-block;
             background: #dcfce7;
@@ -242,10 +230,8 @@
             letter-spacing: 0.5px;
         }
 
-        /* LISTS */
         ol, ul { padding-left: 20px; }
         li { margin-bottom: 10px; font-size: 1.02em; color: var(--mid); }
-        li strong { color: var(--dark); }
         code {
             background: #f1f5f9;
             border: 1px solid var(--border);
@@ -257,7 +243,6 @@
             font-weight: 700;
         }
 
-        /* WHY GRID */
         .why-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -273,68 +258,22 @@
         .why-item strong { display: block; color: var(--dark); margin-bottom: 4px; font-size: 0.95em; }
         .why-item span { font-size: 0.9em; color: var(--mid); line-height: 1.4; display: block; }
 
-        /* FAQ */
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
         .faq-item:last-child { border-bottom: none; }
-        .faq-q {
-            font-weight: 700;
-            color: var(--dark);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.05em;
-            user-select: none;
-        }
-        .faq-q::after {
-            content: '+';
-            font-size: 1.4em;
-            color: var(--blue);
-            font-weight: 300;
-            transition: transform 0.2s;
-        }
+        .faq-q { font-weight: 700; color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.05em; user-select: none; }
+        .faq-q::after { content: '+'; font-size: 1.4em; color: var(--blue); transition: transform 0.2s; }
         .faq-item.open .faq-q::after { transform: rotate(45deg); }
-        .faq-a {
-            display: none;
-            padding-top: 12px;
-            font-size: 0.97em;
-            color: var(--mid);
-            line-height: 1.6;
-        }
+        .faq-a { display: none; padding-top: 12px; font-size: 0.97em; color: var(--mid); }
         .faq-item.open .faq-a { display: block; animation: fadeIn 0.3s ease; }
 
-        /* DISCLAIMER */
-        .disclaimer {
-            font-size: 0.82em;
-            color: #94a3b8;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            margin-top: 24px;
-            line-height: 1.5;
-        }
-
-        /* WARNING BOX */
-        .warning {
-            background: #fffbeb;
-            border: 1px solid #fcd34d;
-            border-radius: 12px;
-            padding: 16px 20px;
-            font-size: 0.95em;
-            color: #92400e;
-            margin: 20px 0;
-            line-height: 1.5;
-        }
+        .disclaimer { font-size: 0.82em; color: #94a3b8; text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 24px; }
+        .warning { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 12px; padding: 16px 20px; font-size: 0.95em; color: #92400e; margin: 20px 0; }
 
         @media (max-width: 600px) {
             .card { padding: 24px 20px; }
             .code-value { font-size: 2.2em; }
             h1 { font-size: 1.4em; }
             .why-grid { grid-template-columns: 1fr; }
-            .badge { display: block; margin: 8px 0 0 0; width: max-content; }
         }
     </style>
 </head>
@@ -347,10 +286,9 @@
     </div>
 
     <div class="lang-section active" id="section-fr">
-
         <div class="card">
             <h1>Code Parrainage EBOX 2026 <span class="badge badge-date">✓ Vérifié</span></h1>
-            <p>Vous cherchez un <strong>code promo EBOX valide en 2026</strong>? Utilisez le code de parrainage ci-dessous pour obtenir <strong>25$ de crédit</strong> sur votre abonnement internet EBOX. Valide pour les nouveaux clients au Québec et en Ontario.</p>
+            <p>Obtenez <strong>25$ de crédit</strong> sur votre abonnement internet EBOX avec le code de parrainage vérifié ci-dessous.</p>
 
             <div class="code-box">
                 <div class="code-label">Code parrainage EBOX 2026</div>
@@ -360,74 +298,39 @@
             </div>
 
             <div class="warning">
-                ⚠️ <strong>Important :</strong> Ce code doit être entré au moment de l'inscription. EBOX n'autorise pas l'ajout rétroactif d'un code une fois la commande finalisée. Le crédit de 25$ apparaît sur votre <strong>2e facture</strong>, pas la première.
+                ⚠️ <strong>Note :</strong> Le crédit apparaît sur votre <strong>2e facture</strong>. Entrez le code lors de l'inscription initiale.
             </div>
 
-            <h2>💡 Comment utiliser le code GE911</h2>
+            <h2>💡 Comment l'utiliser</h2>
             <ol>
-                <li><strong>Copiez le code :</strong> <code>GE911</code></li>
-                <li><strong>Visitez EBOX :</strong> Allez sur <a href="https://ebox.ca" rel="nofollow" target="_blank">ebox.ca</a> ou appelez le 1-844-323-EBOX (3269).</li>
-                <li><strong>Choisissez votre forfait :</strong> Fibre, Câble ou FTTN selon votre adresse. EBOX offre notamment 500 Mbit/s à 50$/mois et 1 Gbit/s à 60$/mois.</li>
-                <li><strong>Entrez le code au paiement :</strong> Indiquez <code>GE911</code> dans le champ "code client" lors de la finalisation.</li>
-                <li><strong>Profitez du rabais :</strong> Votre crédit de 25$ est appliqué automatiquement sur votre 2e facture mensuelle.</li>
+                <li>Allez sur <a href="https://ebox.ca" rel="nofollow" target="_blank">ebox.ca</a>.</li>
+                <li>Choisissez votre forfait Fibre ou Câble.</li>
+                <li>Entrez <code>GE911</code> dans le champ <strong>code client</strong> au paiement.</li>
             </ol>
 
-            <h2>🚀 Pourquoi choisir EBOX?</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <strong>📡 Réseau fibre Bell</strong>
-                    <span>EBOX est une filiale de Bell. Même infrastructure FTTH, prix réduit.</span>
-                </div>
-                <div class="why-item">
-                    <strong>📅 Sans contrat</strong>
-                    <span>Forfaits mensuels, aucun engagement, aucun frais d'annulation.</span>
-                </div>
-                <div class="why-item">
-                    <strong>📶 Routeur Wi-Fi 6 inclus</strong>
-                    <span>Routeur Nokia fourni gratuitement avec la majorité des forfaits fibre.</span>
-                </div>
-                <div class="why-item">
-                    <strong>💲 Prix stables</strong>
-                    <span>Pas de prix promotionnel qui double après 12 mois.</span>
-                </div>
+            <div class="sticker-promo">
+                <strong>🎨 Fan de stickers ?</strong>
+                <p>Besoin de décorer ton laptop ? Reçois <strong>12,50 $ de crédit</strong> sur ta première commande chez <strong>Cashinstinct</strong>.</p>
+                <a href="https://www.stickermule.com/u/cashinstinct" class="sticker-btn" target="_blank">Réclamer mes 12,50 $</a>
             </div>
         </div>
 
         <div class="card">
-            <h2 style="margin-top:0">❓ Questions fréquentes</h2>
-
+            <h2 style="margin-top:0">❓ FAQ</h2>
             <div class="faq-item">
                 <div class="faq-q" onclick="toggleFaq(this)">Quel est le code promo EBOX en 2026?</div>
-                <div class="faq-a">Le code parrainage EBOX actif en 2026 est <strong>GE911</strong>. Il vous donne 25$ de crédit appliqué sur votre deuxième facture mensuelle.</div>
+                <div class="faq-a">Le code actif est <strong>GE911</strong>. Il donne 25$ de crédit sur la 2e facture.</div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Quand est appliqué le rabais de 25$?</div>
-                <div class="faq-a">Le crédit de 25$ est appliqué sur votre <strong>2e facture mensuelle</strong> EBOX, pas la première. Il faut absolument entrer le code GE911 au moment de l'inscription.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Le code GE911 est-il valide en Ontario?</div>
-                <div class="faq-a">Oui, le code GE911 est valide pour les nouveaux clients EBOX au <strong>Québec et en Ontario</strong>.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">EBOX est-il indépendant de Bell?</div>
-                <div class="faq-a">Non. EBOX est une <strong>filiale de Bell Canada</strong>. Vous utilisez le même réseau fibre (FTTH), mais à des tarifs plus bas et sans contrat forcé.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Peut-on ajouter le code après l'inscription?</div>
-                <div class="faq-a">Non. EBOX n'autorise pas l'ajout rétroactif d'un code de parrainage. Vous devez entrer <code>GE911</code> <strong>lors de votre inscription initiale</strong>.</div>
-            </div>
-
             <div class="disclaimer">
-                Ce site est une ressource communautaire indépendante. "GE911" est un code client actif participant au programme de parrainage officiel d'EBOX. Les prix mentionnés sont à titre indicatif et peuvent varier.
+                Site indépendant. "GE911" est un code parrainage officiel participant au programme EBOX.
             </div>
         </div>
     </div>
 
     <div class="lang-section" id="section-en">
-
         <div class="card">
             <h1>EBOX Referral Code 2026 <span class="badge badge-date">✓ Verified</span></h1>
-            <p>Looking for a valid <strong>EBOX promo code for 2026</strong>? Use the referral code below to get a <strong>$25 credit</strong> on your new EBOX internet subscription. Available for new customers in Quebec and Ontario.</p>
+            <p>Get a <strong>$25 credit</strong> on your new EBOX internet plan using the verified referral code below.</p>
 
             <div class="code-box">
                 <div class="code-label">EBOX referral code 2026</div>
@@ -437,65 +340,31 @@
             </div>
 
             <div class="warning">
-                ⚠️ <strong>Important:</strong> This code must be entered at sign-up. EBOX does not allow adding a referral code after your order is processed. The $25 credit appears on your <strong>2nd invoice</strong>, not the first.
+                ⚠️ <strong>Note:</strong> Credit is applied to your <strong>2nd invoice</strong>. Code must be entered during sign-up.
             </div>
 
-            <h2>💡 How to use code GE911</h2>
+            <h2>💡 How to use</h2>
             <ol>
-                <li><strong>Copy the code:</strong> <code>GE911</code></li>
-                <li><strong>Visit EBOX:</strong> Go to <a href="https://ebox.ca" rel="nofollow" target="_blank">ebox.ca</a> or call 1-844-323-EBOX (3269).</li>
-                <li><strong>Select your plan:</strong> Fiber, Cable, or FTTN depending on your address. EBOX currently offers 500 Mbps for $40/month and 1 Gbps for $50/month.</li>
-                <li><strong>Apply at checkout:</strong> Enter <code>GE911</code> in the "client code" field during order finalization.</li>
-                <li><strong>Enjoy your discount:</strong> Your $25 credit is automatically applied to your 2nd monthly invoice.</li>
+                <li>Visit <a href="https://ebox.ca" rel="nofollow" target="_blank">ebox.ca</a>.</li>
+                <li>Pick your Fiber or Cable plan.</li>
+                <li>Enter <code>GE911</code> in the <strong>client code</strong> field at checkout.</li>
             </ol>
 
-            <h2>🚀 Why choose EBOX?</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <strong>📡 Bell's Fiber Network</strong>
-                    <span>EBOX is a Bell Canada subsidiary. Same FTTH infrastructure, lower price.</span>
-                </div>
-                <div class="why-item">
-                    <strong>📅 No Contract</strong>
-                    <span>Month-to-month plans, no commitment, no cancellation fee.</span>
-                </div>
-                <div class="why-item">
-                    <strong>📶 Free Wi-Fi 6 Router</strong>
-                    <span>Nokia router included at no cost with most fiber plans.</span>
-                </div>
-                <div class="why-item">
-                    <strong>💲 Stable Pricing</strong>
-                    <span>No promo price that doubles after 12 months.</span>
-                </div>
+            <div class="sticker-promo">
+                <strong>🎨 Love Stickers?</strong>
+                <p>Customize your setup! Get a <strong>$12.50 credit</strong> on your first order at the <strong>Cashinstinct</strong> store.</p>
+                <a href="https://www.stickermule.com/u/cashinstinct" class="sticker-btn" target="_blank">Claim my $12.50 Credit</a>
             </div>
         </div>
 
         <div class="card">
-            <h2 style="margin-top:0">❓ Frequently Asked Questions</h2>
-
+            <h2 style="margin-top:0">❓ FAQ</h2>
             <div class="faq-item">
                 <div class="faq-q" onclick="toggleFaq(this)">What is the EBOX promo code for 2026?</div>
-                <div class="faq-a">The active EBOX referral code for 2026 is <strong>GE911</strong>. It gives you a $25 credit applied to your second monthly invoice.</div>
+                <div class="faq-a">The active code is <strong>GE911</strong>, giving you a $25 credit on your 2nd bill.</div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">When is the $25 discount applied?</div>
-                <div class="faq-a">The $25 credit is applied to your <strong>2nd monthly invoice</strong>, not the first. You must enter code GE911 at the time of sign-up.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Is the GE911 code valid in Ontario?</div>
-                <div class="faq-a">Yes, code GE911 is valid for new EBOX customers in both <strong>Quebec and Ontario</strong>.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Is EBOX independent from Bell?</div>
-                <div class="faq-a">No. EBOX is a <strong>Bell Canada subsidiary</strong>. You use the same fiber network (FTTH), but at lower prices and without a long-term contract.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Can I add the code after signing up?</div>
-                <div class="faq-a">No. EBOX does not allow retroactive addition of a referral code. You must enter <code>GE911</code> <strong>during your initial sign-up</strong>.</div>
-            </div>
-
             <div class="disclaimer">
-                This site is an independent community resource. "GE911" is an active customer code participating in the official EBOX referral program. Prices mentioned are indicative and may vary.
+                Independent resource. "GE911" is an official referral code in the EBOX program.
             </div>
         </div>
     </div>
@@ -503,59 +372,39 @@
 </div>
 
 <script>
-    // 1. Gestion de la date dynamique
     function updateVerificationDate() {
-        const monthNamesFr = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-        const monthNamesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        
         const d = new Date();
-        const monthFr = monthNamesFr[d.getMonth()];
-        const monthEn = monthNamesEn[d.getMonth()];
         const year = d.getFullYear();
-
+        const monthsFr = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+        const monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const badges = document.querySelectorAll('.badge-date');
-        if(badges.length > 0) badges[0].innerHTML = `✓ Vérifié en ${monthFr} ${year}`;
-        if(badges.length > 1) badges[1].innerHTML = `✓ Verified in ${monthEn} ${year}`;
+        if(badges[0]) badges[0].innerHTML = `✓ Vérifié en ${monthsFr[d.getMonth()]} ${year}`;
+        if(badges[1]) badges[1].innerHTML = `✓ Verified in ${monthsEn[d.getMonth()]} ${year}`;
     }
 
-    // 2. Gestion des langues
     function setLang(lang) {
         document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        
         document.getElementById('section-' + lang).classList.add('active');
-        const btnIndex = lang === 'fr' ? 0 : 1;
-        document.querySelectorAll('.lang-btn')[btnIndex].classList.add('active');
+        const btnIdx = lang === 'fr' ? 0 : 1;
+        document.querySelectorAll('.lang-btn')[btnIdx].classList.add('active');
     }
 
-    // 3. Copie avec feedback haptique/visuel
     function copyCode(code, btnId) {
         navigator.clipboard.writeText(code).then(() => {
             const btn = document.getElementById(btnId);
             const isEn = btnId.includes('en');
-            const originalText = isEn ? '📋 Copy code' : '📋 Copier le code';
-            const successText = isEn ? '✅ Copied!' : '✅ Copié !';
-            
-            btn.innerHTML = successText;
-            btn.style.backgroundColor = '#16a34a'; // Vert succès
-            btn.style.transform = 'translateY(0)';
-            
+            btn.innerHTML = isEn ? '✅ Copied!' : '✅ Copié !';
+            btn.style.backgroundColor = '#16a34a';
             setTimeout(() => { 
-                btn.innerHTML = originalText; 
+                btn.innerHTML = isEn ? '📋 Copy code' : '📋 Copier le code'; 
                 btn.style.backgroundColor = ''; 
             }, 2000);
         });
     }
 
-    // 4. FAQ Toggle
-    function toggleFaq(el) {
-        const item = el.parentElement;
-        item.classList.toggle('open');
-    }
-
-    // Initialisation
+    function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
     window.onload = updateVerificationDate;
 </script>
-
 </body>
 </html>
